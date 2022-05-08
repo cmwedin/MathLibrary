@@ -1,8 +1,8 @@
 {
-  "Name" : "com.sadsapphicgames.InvalidName",
+  "Name" : "com.sadsapphicgames.math-library",
   "Version" : "0.0.1",
-  "DisplayName" : "Invalid Name"
-  "description" : "this is a template description that needs to be updated"
+  "DisplayName" : "Math Library",
+  "description" : "this is an in development library of mathematical classes and functions that may be usefull across projects such as bezier curves"
   "author" : {
     "name" : "Chris Wedin"
     "email" : "cmwedin@gmail.com"
