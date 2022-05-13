@@ -25,5 +25,13 @@ namespace SadSapphicGames.MathLibrary {
             }
             return new Polynomial(Degree - 1,derivCoefficients);
         } }
+
+        public float Evaluate(float t) {
+            float result = 0;
+            for (int i = 0; i <= Degree; i++) {
+                result += Coefficients[0] * Mathf.Pow(t,i);
+            }
+            return result;
+        }
     }
 }
