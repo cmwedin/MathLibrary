@@ -24,6 +24,14 @@ namespace SadSapphicGames.MathLibrary {
             }
             return output;
         }
+        public Vector3 GetTangent(float t) {
+            Vector3 output = Vector3.zero;
+            for (int i = 0; i <= degree; i++) {
+                output += definingPoints[i]*BernsteinBasis[i].Derivative.Evaluate(t);
+            }
+            output = Vector3.Normalize(output);
+            return output;
+        }
 
         // * Private Functions
 
