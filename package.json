@@ -1,7 +1,7 @@
 {
-  "Name" : "com.sadsapphicgames.math-library",
-  "Version" : "0.0.1",
-  "DisplayName" : "Math Library",
+  "name" : "com.sadsapphicgames.math-library",
+  "version" : "0.0.1",
+  "displayName" : "Math Library",
   "description" : "this is an in development library of mathematical classes and functions that may be usefull across projects such as bezier curves"
   "author" : {
     "name" : "Chris Wedin"
