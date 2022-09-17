@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace SadSapphicGames.MathLibrary {
@@ -18,7 +19,7 @@ namespace SadSapphicGames.MathLibrary {
                 else _coefficients = value;
             } }
 
-        public Polynomial Derivative { get { // ? if this code confuses you see https://en.wikipedia.org/wiki/Polynomial#Calculus
+        public IPolynomial Derivative { get { // ? if this code confuses you see https://en.wikipedia.org/wiki/Polynomial#Calculus
             float[] derivCoefficients = new float[Degree];
             for (int i = 1; i <= Degree; i++) {
                 derivCoefficients[i-1] = i * Coefficients[i];
@@ -26,12 +27,14 @@ namespace SadSapphicGames.MathLibrary {
             return new Polynomial(Degree - 1,derivCoefficients);
         } }
 
-        public float Evaluate(float t) {
+        public Func<float, float> Mapping => ((t) =>
+        {
             float result = 0;
             for (int i = 0; i <= Degree; i++) {
                 result += Coefficients[0] * Mathf.Pow(t,i);
             }
             return result;
-        }
+        });
+
     }
 }

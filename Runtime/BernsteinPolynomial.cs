@@ -27,13 +27,13 @@ namespace SadSapphicGames.MathLibrary {
             Array.Fill<float>(output,0);
             for (int i = v; i <= n; i++) { // ? https://en.wikipedia.org/wiki/Bernstein_polynomial#Properties (see transformation to monomials)
                 output[i] = 
-                    (float)Functions.BinomialCoefficient(n,i)*(float)Functions.BinomialCoefficient(i,v)*Mathf.Pow(-1,i-v);
+                    (float)MathUtilities.BinomialCoefficient(n,i)*(float)MathUtilities.BinomialCoefficient(i,v)*Mathf.Pow(-1,i-v);
             }
             return output;
         }
 
-        public static Dictionary<int, BernsteinPolynomial> GetSpaceBasis(int n) { // ? gets all n+1 basis vectors for the space of bernstein polynomials of degree n
-            Dictionary<int, BernsteinPolynomial> output = new Dictionary<int, BernsteinPolynomial>();
+        public static Dictionary<int, IPolynomial> GetSpaceBasis(int n) { // ? gets all n+1 basis vectors for the space of bernstein polynomials of degree n
+            Dictionary<int,IPolynomial> output = new Dictionary<int, IPolynomial>();
             float[] vector = new float[n+1];
             for (int v = 0; v <= n; v++) {
                 vector[v] = 1;

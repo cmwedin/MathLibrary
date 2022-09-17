@@ -4,7 +4,7 @@ using System.Numerics;
 using UnityEngine;
 
 namespace SadSapphicGames.MathLibrary{
-    public class Functions {
+    public class MathUtilities {
         public static BigInteger BinomialCoefficient(BigInteger N, BigInteger K) { //? BigInt might be overkill
             BigInteger result = 1;
             if( K > N) return 0;

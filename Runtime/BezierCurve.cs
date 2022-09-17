@@ -7,7 +7,7 @@ namespace SadSapphicGames.MathLibrary {
     public class BezierCurve {
         private int degree = 3; //? in case i want to extend beyond the cubic in the future
         private Vector3[] definingPoints;
-        private Dictionary<int, BernsteinPolynomial> BernsteinBasis {get => BernsteinPolynomial.GetSpaceBasis(degree);}
+        private Dictionary<int, IPolynomial> BernsteinBasis {get => BernsteinPolynomial.GetSpaceBasis(degree);}
         // * Constructors
         public BezierCurve(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3) {
             definingPoints = new Vector3[degree+1];
